@@ -1,0 +1,157 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/*
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+body {
+	font-family: "Montserrat", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	color: #333333;
+}
+h2{
+	font-weight: 900;
+	font-size: 90px;
+	color:#4A7700;
+	font-variant-caps: all-small-caps;
+}
+h3{
+	font-weight: 900;
+	font-size: 36px;
+	color:#333333;
+	font-variant-caps: all-small-caps;
+	line-height: 1em;
+}
+a{
+	text-decoration: none;
+	color: #333333;
+}
+a:visited{
+	text-decoration: none;
+	color: #333333;
+}
+
+.navlink{
+	font-weight:900;
+	font-variant-caps: all-small-caps;
+}
+
+.speakerimgbox{
+	background-position: center;}
+.acaroglu{
+	background-image: url("../img/acaroglu.jpg");
+	background-position: 75% 25%;
+}
+.antenna{
+	background-image: url("../img/antenna.jpg");
+	background-position: 55% 50%;
+}
+.bayer{
+	background-image: url("../img/bayer.jpg");
+}
+.biddle{
+	background-image: url("../img/biddle.jpg");
+}
+.blum{
+	background-image: url("../img/blum.jpg");
+}
+.brown{
+	background-image: url("../img/brown.jpg");
+}
+.ellison{
+	background-image: url("../img/ellison.jpg");
+}
+.figgener{
+	background-image: url("../img/figgener.jpg");
+}
+.mcdonough{
+	background-image: url("../img/mcdonough.jpg");
+}
+.sadikkhan{
+	background-image: url("../img/sadikkhan.jpg");
+}
+.wurman{
+	background-image: url("../img/wurman.jpg");
+	background-position: 75% 25%;
+}
+.bottles{
+	background-image: url("../img/compact.jpg");
+}
+.compact{
+	background-image: url("../img/compact.jpg");
+}
+
+@media (min-width:600px){
+
+	.navlinkbox{
+		align-self: center;
+		transform: rotate(.25turn);
+		transition-duration: .5s;
+	}
+
+.navbar{
+	grid-column: 3/4;
+	grid-row:1/8;
+	display:grid;
+	grid-template-rows: 34vh 33vh 33vh;
+	background-color: #ff8400;
+	transition-duration: .5s;
+}
+
+.navbar:hover{
+	margin-left:-5em;
+	transition-duration:.5s;
+}
+.navlinkbox{
+	align-self: center;
+	transform: rotate(.25turn);
+	transition-duration:.5s;
+}
+
+.navbar:hover .navlinkbox{
+	transform: rotate(0turn);
+	margin-left: 2em;
+	transition-duration:.5s;
+}
+.navlink{
+	align-self: center;
+	text-align:right;
+	font-size:18px;
+	font-weight:900;
+	font-variant-caps: all-small-caps;
+}
+}
+
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area.
+	If you have more than one container, you are probably doing
+	something wrong.
+*/
+
+
+
+/* ------------------------------------------------------------ */
+/* media query containing styles for larger screens */

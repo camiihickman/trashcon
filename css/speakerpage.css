@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/*
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+
+.navcontainer{
+padding: 12px;
+}
+
+p{
+	border-top: 2px solid #ff8400;
+	border-left: 2px solid #ff8400;
+	padding: 1em;
+	margin-left:1em;
+}
+h2{
+	line-height: 1em;
+}
+p{
+	margin-bottom: 90px;
+}
+h3{
+	padding-left: .5em;
+	color: #4A7700;
+}
+
+@media (min-width:600px){
+	.navcontainer{
+		padding: 0px;
+		display:grid;
+		grid-template-columns: 6fr 10fr 1fr;
+		grid-row-gap: 24px;
+	}
+
+	.title{
+		grid-column: 2/3;
+		padding-left: 24px;
+		margin-top:-24px;
+		line-height: 5em;
+	}
+	.side{
+		grid-column:1/2;
+		grid-row: 1/8;
+		display:grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 1fr;
+		background-color: #4A7700;
+	}
+	.speakerimgbox{
+		grid-column:1/2;
+		grid-row: 1/8;
+		background-size: cover;
+	}
+}
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area.
+	If you have more than one container, you are probably doing
+	something wrong.
+*/
+
+
+
+/* ------------------------------------------------------------ */
+/* media query containing styles for larger screens */
+@media (min-width: 720px) {
+
+	/* container on larger screens */
+
+
+} /* end media query */

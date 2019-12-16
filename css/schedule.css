@@ -1,0 +1,142 @@
+/* ------------------------------------------------------------ */
+/* imports and utilities */
+
+/* 3rd-party CSS files */
+@import 'vendor/h5bp-head.css';
+@import 'vendor/normalize.css';
+@import 'vendor/h5bp-tail.css';
+
+/* use a more intuitive box sizing model (http://is.gd/wNVjAo) */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* Scale down images and embedded videos so they don't overflow their parents */
+img, object { max-width: 100%; }
+
+/*	Development/layout aid. Remove the comments
+	on this rule in order to draw boxes around DIVs
+	and other elements used for layout. */
+/*
+div, main, article, section, aside, hgroup, header, footer, address, nav {
+	border: 1px solid rgba(255,0,0,0.15) !important;
+	background: rgba(255,0,0,0.05) !important;
+}
+*/
+
+
+/* ------------------------------------------------------------ */
+/* start project-specifc styles below this line */
+
+
+
+h2{
+	font-size:20vw;
+}
+h3{
+	font-size: 10vw;
+}
+
+.title{
+	grid-column: 1/2;
+	padding: 12px;
+	margin-top:-24px;
+}
+
+.event{
+	background-color: #cccccc;
+	border-radius: 12px;
+	margin:12px;
+}
+
+.time{
+	font-size: 16px;
+	font-weight:900;
+	padding:1em;
+}
+.speakerlink{
+	font-size: 16px;
+	padding-bottom: 12px;
+	padding-left: 12px;
+}
+
+h3{
+	padding-left: .5em;
+	padding-right: .5em;
+}
+.eventdescription{
+	margin-top:-12px;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+/*	Generally, you will only want one container element in
+	the document, wrapping around the main content area.
+	If you have more than one container, you are probably doing
+	something wrong.
+*/
+
+
+
+/* ------------------------------------------------------------ */
+/* media query containing styles for larger screens */
+@media (min-width: 600px) {
+	.navcontainer{
+		display:grid;
+		grid-template-columns: 6fr 10fr 1fr;
+		grid-row-gap:24px;
+	}
+	.title{
+		grid-column: 2/3;
+		padding-left: 24px;
+		margin-top:-24px;
+	}
+	.side{
+		grid-column:1/2;
+		grid-row: 1/8;
+		display:grid;
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 1fr;
+		background-color: #4A7700;
+		margin-right:24px;
+	}
+	.speakerimgbox{
+		grid-column:1/2;
+		grid-row: 1/8;
+		background-size: repeat;
+	}
+	.event{
+		grid-column: 2/3;
+		background-color: #cccccc;
+		display: grid;
+		grid-template-columns: 1fr 11fr;
+		grid-template-rows: 1fr;
+		border-radius: 12px;
+		margin-right: 24px;
+	}
+
+	.time{
+		writing-mode:vertical-lr;
+		transform:rotate(.5turn);
+		font-size: 16px;
+		font-weight:900;
+		margin-top: -90px;
+		margin-bottom: 24px;
+		margin-right: -12px;
+
+	}
+	h3{
+		grid-column: 2/3;
+	}
+	.eventdescription{
+		grid-column: 2/3;
+	}
+	h2{
+		font-size: 90px;
+	}
+	h3{
+		font-size: 36px;
+	}
+	.speakerlink{
+		grid-column: 2/3;
+		padding-left: 1em;
+	}
+
+} /* end media query */
